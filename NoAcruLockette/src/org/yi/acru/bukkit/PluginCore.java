@@ -613,6 +613,7 @@ public abstract class PluginCore extends JavaPlugin{
 	public boolean canBuild(String playerName, Block block){
 		return(canBuild(getServer().getPlayer(playerName), block));
 	}
+	@SuppressWarnings("static-access")
 	public boolean canBuild(Player player, Block block){
 		lastZoneDeny = "noone";
 		if(!usingExternalZones()) return(true);
