@@ -548,7 +548,7 @@ public abstract class PluginCore extends JavaPlugin{
 				PlayerProfile	pProfile = linkMcmmo.getMcmmo().getPlayerProfile(player);
 				
 				if(pProfile != null) if(pProfile.inParty()){
-					if(pProfile.getParty().equalsIgnoreCase(groupName.substring(1, end))) return(true);
+					if(pProfile.getParty().getName().equalsIgnoreCase(groupName.substring(1, end))) return(true);
 				}
 			}
 			
