@@ -15,6 +15,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
 
+import net.sacredlabyrinth.phaed.simpleclans.Clan;
+
+import org.anjocaido.groupmanager.GroupManager;
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.World;
@@ -24,10 +27,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import org.yi.acru.bukkit.PluginCoreLink.LinkType;
 
-import com.gmail.nossr50.datatypes.PlayerProfile;
+import ru.tehkode.permissions.bukkit.PermissionsEx;
+
 import com.griefcraft.lwc.LWC;
 import com.griefcraft.model.Protection;
 import com.nijiko.permissions.PermissionHandler;
@@ -37,10 +40,8 @@ import com.palmergames.bukkit.towny.object.Nation;
 import com.palmergames.bukkit.towny.object.Resident;
 import com.palmergames.bukkit.towny.object.Town;
 import com.platymuus.bukkit.permissions.Group;
+
 import de.bananaco.bpermissions.api.WorldManager;
-import net.sacredlabyrinth.phaed.simpleclans.Clan;
-import org.anjocaido.groupmanager.GroupManager;
-import ru.tehkode.permissions.bukkit.PermissionsEx;
 
 
 
@@ -70,7 +71,7 @@ public abstract class PluginCore extends JavaPlugin{
 	private static PluginCoreLink			linkBPermissions = null;
 	private static PluginCoreLink			linkTowny = null;
 	private static PluginCoreLink			linkSimpleClans = null;
-	private static PluginCoreLink			linkMcmmo = null;
+//	private static PluginCoreLink			linkMcmmo = null;
 	private static PluginCoreLink			linkFactions = null;
 	private static PluginCoreLink			linkLWC = null;
 	//private static PluginCoreLink			linkIConomy = null;
@@ -138,7 +139,7 @@ public abstract class PluginCore extends JavaPlugin{
 		linkBPermissions = linkExternalPlugin("bPermissions", LinkType.GROUPS_PERMISSIONS);
 		linkTowny = linkExternalPlugin("Towny", LinkType.GROUPS_ZONES);
 		linkSimpleClans = linkExternalPlugin("SimpleClans", LinkType.GROUPS);
-		linkMcmmo = linkExternalPlugin("mcMMO", LinkType.GROUPS);
+//		linkMcmmo = linkExternalPlugin("mcMMO", LinkType.GROUPS);
 		linkFactions = linkExternalPlugin("Factions", LinkType.GROUPS);
 		linkLWC = linkExternalPlugin("LWC", LinkType.ZONES);
 		//linkIConomy = linkExternalPlugin("iConomy", LinkType.ECONOMY);
@@ -544,13 +545,13 @@ public abstract class PluginCore extends JavaPlugin{
 				}
 			}
 			
-			if(linkMcmmo.isEnabled()) if(player != null){
-				PlayerProfile	pProfile = linkMcmmo.getMcmmo().getPlayerProfile(player);
-				
-				if(pProfile != null) if(pProfile.inParty()){
-					if(pProfile.getParty().getName().equalsIgnoreCase(groupName.substring(1, end))) return(true);
-				}
-			}
+//			if(linkMcmmo.isEnabled()) if(player != null){
+//				PlayerProfile	pProfile = linkMcmmo.getMcmmo().getPlayerProfile(player);
+//				
+//				if(pProfile != null) if(pProfile.inParty()){
+//					if(pProfile.getParty().getName().equalsIgnoreCase(groupName.substring(1, end))) return(true);
+//				}
+//			}
 			
 			if(linkFactions.isEnabled()) if(player != null){
 				String		tag = linkFactions.getFactions().getPlayerFactionTag(player);
