@@ -1,7 +1,29 @@
 NoAcruLockette - Lists
 ----------------------------------
 
+LICENSE
+--------------------------
+Orientation is that of Lockette (to be updated), see README_LOCKETTE.txt and README_PLUGIN_CORE.txt
 
+Lockette and PluginCore for Bukkit, written by Acru Jovian.
+Distributed under the The Non-Profit Open Software License version 3.0 (NPOSL-3.0)
+http://www.opensource.org/licenses/NOSL3.0
 
+Adapted by asofold, license preserved.
 
+STACK
+----------------------------------
+
+? remove more features ? :p
+
+VERSION_HISTORY
+----------------------------------
+
+(ASOMOD-0.0.1)
+- (bugfix) Removed debugging bypass for user Acru.
+- (remove) Removed mcMMO integration (mcMMO parties are too short living, no way of control).
+
+(ASOMOD-0.0.0)
+- (bugfix) Fixed mcMMO party handling.
+- (Initial import)
 
